@@ -132,19 +132,24 @@ alert("Wrong Password");
 
 }
 
-window.save = function(){
+window.save = async function(){
 
-const whatsapp =
-document.getElementById("whatsapp").value;
+  const whatsapp =
+  document.getElementById("whatsapp").value;
 
-set(ref(db,"site"),{
+  try {
+    await set(ref(db,"site"),{
+      whatsapp: whatsapp
+    });
 
-whatsapp: whatsapp
+    alert("WhatsApp Updated Successfully");
 
-});
+  } catch(error) {
 
-alert("WhatsApp Updated");
+    alert("Error: " + error.message);
+    console.log(error);
 
+  }
 }
 
 </script>
