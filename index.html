@@ -732,7 +732,7 @@ function submitWA() {
     '💵 *Total: ₹' + total.toLocaleString('en-IN') + '*\n\n' +
     '⚡ Please confirm my booking!'
   );
-  setTimeout(()=>{ window.open('https://wa.me/'+WA+'?text='+msg,'_blank'); }, 700);
+  setTimeout(()=>{ window.open('https://wa.me/'+WA_NUMBER+'?text='+msg,'_blank'); }, 700);
 }
 
 function confetti() {
@@ -804,7 +804,7 @@ const data = snapshot.val();
 
 if(data){
 
-WA = data.whatsapp;
+WA_NUMBER = data.whatsapp;
 
 }
 
