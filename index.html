@@ -811,5 +811,20 @@ WA_NUMBER = data.whatsapp;
 });
 
   </script>
+  <a href="#" class="wa-float" id="floatingWhatsapp">
+  💬
+  <span class="wa-float-badge">1</span>
+</a>
+
+<script>
+document.getElementById("floatingWhatsapp").addEventListener("click", function(e) {
+    e.preventDefault();
+
+    const btn = document.querySelector(".wa-btn");
+    if(btn){
+        btn.click();
+    }
+});
+</script>
 </body>
 </html>
